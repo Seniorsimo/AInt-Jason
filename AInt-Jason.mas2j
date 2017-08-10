@@ -1,0 +1,14 @@
+/* Jason Project */
+MAS aInt_Jason {
+
+    infrastructure: Centralised
+
+    agents:
+
+        initiator;
+
+        participant #2;
+
+}
+
+
