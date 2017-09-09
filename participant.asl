@@ -31,7 +31,8 @@
 	+working(Task);
 	.wait(5000); //task take 5 sec.
 	-working(Task);
-	.send(Other, tell, completed(Task)).
+	.send(Other, tell, completed(Task));
+	.print("Completed task ", Task).
 
 /* initiator refuse the proposal */
 +!refuse(Task)[source(Other)] : initiator(Other) & proposing(Task) <-

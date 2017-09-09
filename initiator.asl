@@ -37,7 +37,7 @@ has_task(Task) :-
 	.print("Executing task ",Task);
 	?available(Task, Partecipant);			// Recupera un Partecipant
 	if (.literal(Partecipant)) {
-		.print("Available: ", Partecipant);
+		//.print("Available: ", Partecipant);
 		!send_task(Task, Partecipant);		// Gli invia Task
 	} else {
 		.print("No free partecipant");
@@ -73,7 +73,7 @@ has_task(Task) :-
 /* Rimuove dalla base di conoscenza le informazioni raccolte da cfp */
 +!clean(Task) <-
 	.findall(X, cfp(Task, X), Cfps);
-	.print("Cleaning ", Cfps);
+	//.print("Cleaning ", Cfps);
 	for( .member(B, Cfps) ){
 		-cfp(Task, B);
 	}.
